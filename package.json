@@ -1,0 +1,15 @@
+{
+  "name": "prosto-telecom",
+  "version": "1.0.0",
+  "description": "Тестовое задание на вакансию фронтендера",
+  "author": "Roman Stepanov",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stepanov-roman/prosto-telecom.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stepanov-roman/prosto-telecom/issues"
+  },
+  "homepage": "https://github.com/stepanov-roman/prosto-telecom#readme"
+}
