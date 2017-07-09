@@ -9,7 +9,312 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
-
+    <header class="page-header">
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">Меню</button>
+        <div class="logo">
+          <a href="#">
+            <picture>
+              <source media="(min-width: 780px)" srcset="img/logo-desktop.png">
+              <img src="img/logo-mobile.png" alt="ПРОСТО Телеком">
+            </picture>
+          </a>
+        </div>
+        <div class="main-nav__wrapper">
+          <div class="service">
+            <a class="service__target" href="#">Для дома</a>
+            <a class="service__target" href="#">Для бизнеса</a>
+          </div>
+          <div class="menu">
+            <ul class="menu__items">
+              <li class="menu__item">
+                <a class="menu__item-link" href="#">Продукты и услуги</a>
+                <ul class="menu__subitems">
+                  <li class="menu__subitem"><a href="#">Интернет</a></li>
+                  <li class="menu__subitem"><a href="#">Телефония</a></li>
+                  <li class="menu__subitem"><a href="#">Каналы передачи данных</a></li>
+                </ul>
+              </li>
+              <li class="menu__item">
+                <a class="menu__item-link" href="#">Решения</a>
+                <ul class="menu__subitems">
+                  <li class="menu__subitem"><a href="#">Подпункт 1</a></li>
+                  <li class="menu__subitem"><a href="#">Подпункт 2</a></li>
+                </ul>
+              </li>
+              <li class="menu__item">
+                <a class="menu__item-link" href="#">Облачные сервисы</a>
+                <ul class="menu__subitems">
+                  <li class="menu__subitem"><a href="#">Подпункт 1</a></li>
+                  <li class="menu__subitem"><a href="#">Подпункт 2</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="company">
+            <a class="company__link" href="#">О компании</a>
+            <a class="company__link" href="#">Новости</a>
+            <a class="company__link" href="#">Вакансии</a>
+            <a class="company__link" href="#">Контакты</a>
+          </div>
+          <div class="user">
+            <a class="user__btn  user__btn--login" href="#">Личные кабинет</a>
+            <a class="user__btn  user__btn--call-me" href="#">Обратная связь</a>
+            <a class="user__btn  user__btn--search" href="#">Поиск</a>
+          </div>
+          <div class="location">
+            <a class="location__city" href="#">Санкт-Петербург</a>
+            <a class="location__phone" href="tel:+78123664040">+7 (812) 366 40 40</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="slider">
+        <input id="slide1" class="slider__control" type="radio" name="slider" value="slide1">
+        <input id="slide2" class="slider__control" type="radio" name="slider" value="slide2">
+        <input id="slide3" class="slider__control" type="radio" name="slider" value="slide3" checked>
+        <input id="slide4" class="slider__control" type="radio" name="slider" value="slide4">
+        <div class="slider__arrows">
+          <button class="slider__btn  slider__btn--prev" type="button">Назад</button>
+          <button class="slider__btn  slider__btn--next" type="button">Вперед</button>
+        </div>
+        <div class="slider__dots">
+          <label for="slide1" class="slider__dot"></label>
+          <label for="slide2" class="slider__dot"></label>
+          <label for="slide3" class="slider__dot"></label>
+          <label for="slide4" class="slider__dot"></label>
+        </div>
+        <div class="slider__slides">
+          <div class="slider__slide">
+            <h3 class="slider__title"><a href="#">Слайд 1</a></h3>
+            <p class="slider__desc">слайд1 слайд1 слайд1 слайд1</p>
+          </div>
+          <div class="slider__slide">
+            <h3 class="slider__title"><a href="#">Слайд 2</a></h3>
+            <p class="slider__desc">слайд2 слайд2 слайд2 слайд2</p>
+          </div>
+          <div class="slider__slide  slider__slide--businesss">
+            <h3 class="slider__title"><a href="#">Малый бизнес</a></h3>
+            <p class="slider__desc">от идеи до воплощения 3 дня</p>
+          </div>
+          <div class="slider__slide">
+            <h3 class="slider__title"><a href="#">Слайд 4</a></h3>
+            <p class="slider__desc">слайд4 слайд4 слайд4 слайд4</p>
+          </div>
+        </div>
+      </div>
+      <div class="offers">
+        <div class="offers__container">
+          <input id="offer1" class="offers__control" type="radio" name="offers" value="offer1">
+          <input id="offer2" class="offers__control" type="radio" name="offers" value="offer2" checked>
+          <input id="offer3" class="offers__control" type="radio" name="offers" value="offer3">
+          <input id="offer4" class="offers__control" type="radio" name="offers" value="offer4">
+          <div class="offers__header">
+            <h2 class="offers__title">Выгодные предложения для различных направлений бизнеса:</h2>
+            <div class="offers__tabs">
+              <label for="offer1" class="offers__tab  offers__tab--retail">Ритейл</label>
+              <label for="offer2" class="offers__tab  offers__tab--wifi">Организация WiFi зон</label>
+              <label for="offer3" class="offers__tab  offers__tab--call">Call-центры</label>
+              <label for="offer4" class="offers__tab  offers__tab--logistics">Логистика</label>
+            </div>
+          </div>
+          <div class="offers__tab-content">
+            <div class="offers__item">
+              <div class="offers__img-wrapper">
+                <picture>
+                  <source media="(min-width: 780px)" srcset="http://placehold.it/293x293">
+                  <img src="http://placehold.it/320x162" alt="">
+                </picture>
+              </div>
+              <div class="offers__detail">
+                <h3 class="offers__item-title"><a href="#"><span>Ритейл</span></a></h3>
+                <p class="offers__desc">
+                  Ритейл ритейл ритейл ритейл ритейл ритейл ритейл ритейл ритейл ритейл ритейл ритейл ритейл ритейл ритейл ритейл ритейл ритейл ритейл ритейл ритейл ритейл
+                </p>
+                <a class="btn" href="#">Запросить коммерческое предложение</a>
+              </div>
+            </div>
+            <div class="offers__item">
+              <div class="offers__img-wrapper">
+                <picture>
+                  <source media="(min-width: 780px)" srcset="img/offer-wifi-desktop.jpg">
+                  <img src="img/offer-wifi-mobile.jpg" alt="">
+                </picture>
+              </div>
+              <div class="offers__detail">
+                <h3 class="offers__item-title"><a href="#"><span>Удобный</span> <span>интернет-серфинг</span> <span>в общественных местах</span></a></h3>
+                <p class="offers__desc">
+                  Зоны свободного доступа в интернет для посетителей кафе, ресторанов, салонов красоты и других заведений
+                </p>
+                <a class="btn" href="#">Запросить коммерческое предложение</a>
+              </div>
+            </div>
+            <div class="offers__item">
+              <div class="offers__img-wrapper">
+                <picture>
+                  <source media="(min-width: 780px)" srcset="http://placehold.it/293x293">
+                  <img src="http://placehold.it/320x162" alt="">
+                </picture>
+              </div>
+              <div class="offers__detail">
+                <h3 class="offers__item-title"><a href="#"><span>Call-центры</span></a></h3>
+                <p class="offers__desc">
+                  Call-центры call-центры call-центры call-центры call-центры call-центры call-центры call-центры call-центры call-центры call-центры call-центры call-центры call-центры call-центры
+                </p>
+                <a class="btn" href="#">Запросить коммерческое предложение</a>
+              </div>
+            </div>
+            <div class="offers__item">
+              <div class="offers__img-wrapper">
+                <picture>
+                  <source media="(min-width: 780px)" srcset="http://placehold.it/293x293">
+                  <img src="http://placehold.it/320x162" alt="">
+                </picture>
+              </div>
+              <div class="offers__detail">
+                <h3 class="offers__item-title"><a href="#"><span>Логистика</span></a></h3>
+                <p class="offers__desc">
+                  Логистика логистика логистика логистика логистика логистика логистика логистика логистика логистика логистика логистика логистика логистика логистика логистика логистика логистика логистика
+                </p>
+                <a class="btn" href="#">Запросить коммерческое предложение</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="news">
+        <div class="news__container">
+          <div class="news__tabs">
+            <span class="news__tab  news__tab--active">Новости</span>
+            <span class="news__tab">Публикаци</span>
+          </div>
+          <input id="news1" type="radio" name="news" value="news1">
+          <input id="news2" type="radio" name="news" value="news2" checked>
+          <input id="news3" type="radio" name="news" value="news3">
+          <div class="news__tab-content">
+            <article class="news__item">
+              <h3 class="news__title"><a href="#">«ПРОСТО Телеком» приступает к оказанию услуг телефонии в Пензе</a></h3>
+              <p class="news__text">
+                Корпоративные клиенты в Пензе теперь могут приобрести городские телефонные номера у оператора связи "ПРОСТО Телеком"
+              </p>
+              <span class="news__date">7 ноября 2014</span>
+            </article>
+            <article class="news__item">
+              <h3 class="news__title"><a href="#">Компания «ПРОСТО Телеком» отмечает свой день рождения</a></h3>
+              <p class="news__text">
+                17 лет назад в Петербурге была основана компания "ПРОСТО Телеком". За эти годы компания  из небольшого интернет-провайдера превратилась в универсального оператора связи федерального масштаба.
+              </p>
+              <span class="news__date">14 ноября 2014</span>
+            </article>
+            <article class="news__item">
+              <h3 class="news__title"><a href="#">Осенью подключение пакета «Интернет + Телефон» бесплатно!</a></h3>
+              <p class="news__text">
+                С 15 сентября корпоративные клиенты в Пензе могут бесплатно подключить пакет "Интернет + Телефон"
+              </p>
+              <span class="news__date">21 ноября 2014</span>
+            </article>
+          </div>
+          <div class="news__dots">
+            <label for="news1" class="news__dot"></label>
+            <label for="news2" class="news__dot"></label>
+            <label for="news3" class="news__dot"></label>
+          </div>
+          <div class="news__btn-wrapper">
+            <a class="btn" href="#">Еще новости</a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="overlay"></div>
+    <div class="modal">
+      <input id="login-tab1" class="modal__tab-control" type="radio" name="modal-login" value="login-tab1" checked>
+      <input id="login-tab2" class="modal__tab-control" type="radio" name="modal-login" value="login-tab2">
+      <div class="modal__header">
+        <button class="modal__btn-close" type="button" title="Закрыть">Закрыть</button>
+        <h2 class="modal__title">Личный кабинет</h2>
+        <div class="modal__tabs">
+          <label for="login-tab1" class="modal__tab">Регистрация</label>
+          <label for="login-tab2" class="modal__tab">Авторизация</label>
+        </div>
+      </div>
+      <div class="modal__tab-content">
+        <form class="form" action="#" method="post">
+          <input class="form__input" type="text" name="first-name" placeholder="Имя" required>
+          <input class="form__input" type="text" name="last-name" placeholder="Фамилия" required>
+          <input class="form__input" type="email" name="email" placeholder="Электронная почта" required>
+          <input class="form__input" type="tel" name="phone" placeholder="Телефон" required>
+          <input class="form__input" type="password" name="password" placeholder="Пароль" required>
+          <input class="form__input" type="password" name="confirm-password" placeholder="Подтвердите пароль" required>
+          <div class="form__footer">
+            <button class="btn" type="submit" name="button">Зарегистрироваться</button>
+          </div>
+        </form>
+        <form class="form" action="#" method="post">
+            форма для авторизации
+        </form>
+      </div>
+    </div>
+    <div class="modal">
+      <input id="feedback-tab1" class="modal__tab-control" type="radio" name="modal-feedback" value="feedback-tab1">
+      <input id="feedback-tab2" class="modal__tab-control" type="radio" name="modal-feedback" value="feedback-tab2" checked>
+      <input id="feedback-tab3" class="modal__tab-control" type="radio" name="modal-feedback" value="feedback-tab3">
+      <div class="modal__header">
+        <button class="modal__btn-close" type="button" title="Закрыть">Закрыть</button>
+        <h2 class="modal__title  modal__title--help">Обратная связь</h2>
+        <div class="modal__tabs">
+          <label for="feedback-tab1" class="modal__tab">Частный клиент</label>
+          <label for="feedback-tab2" class="modal__tab">Юридическое лицо</label>
+          <label for="feedback-tab3" class="modal__tab">Промо-офис</label>
+        </div>
+      </div>
+      <div class="modal__tab-content">
+        <form class="form" action="#" method="post">
+          форма для частного клиента
+        </form>
+        <form class="form" action="#" method="post">
+          <input class="form__input  form__input--full-name" type="text" name="name" placeholder="Фамилия, Имя, Отчество" required>
+          <input class="form__input  form__input--phone" type="tel" name="phone" placeholder="Номер телефона" required>
+          <input class="form__input  form__input--email" type="email" name="email" placeholder="Email" required>
+          <div class="form__group">
+            <label for="city" class="form__label">Адрес подключения услуги</label>
+            <select id="city" name="city" required>
+              <option value="">Выберите город</option>
+              <option value="city1">Санкт-Петербург</option>
+            </select>
+            <input class="form__input  form__input--street" type="text" name="street" placeholder="Улица" required>
+            <input class="form__input  form__input--house" type="text" name="house" placeholder="Номер дома" required>
+            <input class="form__input  form__input--apartment" type="text" name="apartment" placeholder="Квартира" required>
+          </div>
+          <div class="form__group">
+            <label for="type" class="form__label">Тип обращения</label>
+            <select id="type" name="type" required>
+              <option value="">Выберите тип услуги</option>
+              <option value="type1">Интернет</option>
+              <option value="type2">Телефония</option>
+              <option value="type3">Каналы передачи данных</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label for="subject" class="form__label">Тема обращения</label>
+            <select id="subject" name="subject" required>
+              <option value="">Выберите тему</option>
+              <option value="subject1">Тема 1</option>
+              <option value="subject2">Тема 2</option>
+              <option value="subject3">Тема 3</option>
+            </select>
+          </div>
+          <textarea class="form__input  form__input--message" name="message" placeholder="Сообщение" required></textarea>
+          <div class="form__footer">
+            <span class="form__required">Все поля обязательны для заполнения</span>
+            <button class="btn" type="submit" name="button">Отправить</button>
+          </div>
+        </form>
+        <form class="form" action="#" method="post">
+          форма для промо-офиса
+        </form>
+      </div>
+    </div>
     <script src="js/script.min.js"></script>
   </body>
 </html>
