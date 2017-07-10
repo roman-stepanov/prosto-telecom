@@ -1,0 +1,127 @@
+.menu {
+  background-color: transparent;
+
+  @media #{$desktop} {
+    position: absolute;
+    top: 80px;
+    left: 0px;
+    width: 100%;
+    background-color: #002672;
+  }
+}
+
+.menu__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media #{$desktop} {
+    text-align: center;
+  }
+}
+
+.menu__item {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 46px;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+  @media #{$desktop} {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    padding: 12px 28px 13px 0px;
+    border-bottom: 0;
+  }
+}
+
+.menu__item-link {
+  display: block;
+  position: relative;
+  color: #ffffff;
+  text-decoration: none;
+
+  &:hover {
+    color: #fbf239;
+  }
+}
+
+.menu__subitems {
+  display: none;
+  list-style: none;
+  margin: -8px 0px 24px 0px;
+  padding: 0;
+}
+
+.menu__subitem {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+
+  & a {
+    display: block;
+    color: #8cabe8;
+    text-decoration: none;
+  }
+
+  & a:hover {
+    color: #fbf239;
+  }
+}
+
+@media #{$only-mobile} {
+
+  .menu__item-link {
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 14px;
+      right: 0px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      right: 7px;
+      border: 2px solid #ffffff;
+      border-top-width: 0;
+      border-left-width: 0;
+      width: 4px;
+      height: 4px;
+      transform: rotate(45deg);
+    }
+
+    &:hover::before {
+      border-color: #ffffff;
+    }
+
+    &:hover::after {
+      border-color: #fbf239;
+    }
+
+    &--dropdown::after {
+      top: 21px;
+      transform: rotate(-135deg);
+    }
+  }
+
+  .nojs .menu__item-link::before,
+  .nojs .menu__item-link::after {
+    content: none;
+  }
+
+  .menu__item-link--dropdown ~ .menu__subitems,
+  .nojs .menu__subitems {
+    display: block;
+  }
+}

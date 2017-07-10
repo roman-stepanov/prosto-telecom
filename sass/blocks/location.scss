@@ -1,0 +1,58 @@
+.location {
+  font-size: 14px;
+  line-height: 19px;
+  padding: 19px 0px 22px 0px;
+
+  @media #{$desktop} {
+    padding: 0px 0px 0px 4.6%;
+  }
+}
+
+.location__city {
+  display: inline-block;
+  position: relative;
+  color: #ffffff;
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0px 14px 7px 0px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    border: 2px solid #ffffff;
+    border-top-width: 0;
+    border-left-width: 0;
+    width: 6px;
+    height: 6px;
+    transform: rotate(-45deg);
+  }
+
+  @media #{$desktop} {
+    color: #000000;
+    padding: 0px 14px 0px 0px;
+
+    &::after {
+      top: 3px;
+      border-color: #000000;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.location__phone {
+  color: #ffffff;
+  display: block;
+  font-weight: 300;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  @media #{$desktop} {
+    color: #686767;
+  }
+}

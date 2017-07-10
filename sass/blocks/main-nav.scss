@@ -1,0 +1,146 @@
+.main-nav {
+  display: flex;
+  flex-direction: column;
+
+  @media #{$desktop} {
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0px 2.35% 0px 2.35%;
+    width: 100%;
+    max-width: 1072px;
+    box-sizing: border-box;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  z-index: 10;
+  display: block;
+  font-size: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+
+  @media #{$desktop} {
+    display: none;
+  }
+}
+
+.main-nav--closed  .main-nav__toggle {
+  top: 24px;
+  right: 19px;
+  width: 28px;
+  height: 26px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    right: 2px;
+    left: 2px;
+    height: 4px;
+    background-color: #263b82;
+    box-shadow: 0 7px 0 0 #263b82,
+                0 14px 0 0 #263b82;
+  }
+
+  &:hover::before {
+    background-color: #fbf239;
+    box-shadow: 0 7px 0 0 #fbf239,
+                0 14px 0 0 #fbf239;
+  }
+}
+
+.main-nav--opened  .main-nav__toggle {
+  top: 20px;
+  right: 20px;
+  width: 29px;
+  height: 26px;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 0px;
+    width: 29px;
+    height: 2px;
+    background-color: #8cabe8;
+  }
+
+  &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: #fbf239;
+  }
+}
+
+.main-nav__logo {
+  width: 162px;
+  padding: 16px 14px 17px 14px;
+
+  & img {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  @media #{$desktop} {
+    width: 198px;
+    padding: 17px 0px 16px 0px;
+  }
+}
+
+.main-nav__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 24px;
+  background-color: #123885;
+
+  @media #{$desktop} {
+    flex-grow: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+@media #{$only-mobile} {
+
+  .main-nav--closed  .main-nav__wrapper {
+    display: none;
+  }
+
+  .main-nav--opened  .main-nav__wrapper {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 24px;
+    z-index: 9;
+    min-height: 100vh;
+  }
+
+  .nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .nojs .main-nav__wrapper {
+    display: block;
+    position: static;
+    min-height: auto;
+  }
+}

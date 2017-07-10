@@ -1,0 +1,79 @@
+.user {
+  font-size: 0;
+
+  @media #{$desktop} {
+    order: 1;
+  }
+}
+
+.user__btn {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin: 0px 8px 0px 0px;
+  padding: 0;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 22px;
+    height: 22px;
+    background-image: url('../img/user-icons.png');
+    background-repeat: no-repeat;
+  }
+
+  &:hover {
+    border-color: #fbf239;
+    background-color: #fbf239;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--login::before {
+    background-position: -6px -7px;
+  }
+
+  &--login:hover::before {
+    background-position: -41px -7px;
+  }
+
+  &--call-me::before {
+    background-position: -75px -7px;
+  }
+
+  &--call-me:hover::before {
+    background-position: -110px -7px;
+  }
+
+  &--search::before {
+    background-position: -146px -5px;
+  }
+
+  &--search:hover::before {
+    background-position: -181px -5px;
+  }
+
+  @media #{$desktop} {
+    border-color: #eaeaea;
+
+    &--login::before {
+      background-position: -41px -7px;
+    }
+
+    &--call-me::before {
+      background-position: -110px -7px;
+    }
+
+    &--search::before {
+      background-position: -181px -5px;
+    }
+  }
+}

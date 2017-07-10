@@ -1,2 +1,13 @@
 @import "global/variables.scss";
 @import "global/fonts.scss";
+@import "global/common.scss";
+
+@import "blocks/page-header.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/service.scss";
+@import "blocks/menu.scss";
+@import "blocks/company.scss";
+@import "blocks/user.scss";
+@import "blocks/location.scss";
+
+@import "blocks/overlay.scss";

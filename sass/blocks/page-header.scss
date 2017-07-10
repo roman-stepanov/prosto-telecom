@@ -1,0 +1,10 @@
+.page-header {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: #fcfdff;
+
+  @media #{$desktop} {
+    margin-bottom: 43px;
+  }
+}

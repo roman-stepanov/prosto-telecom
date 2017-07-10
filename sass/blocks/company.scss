@@ -1,0 +1,38 @@
+.company {
+  flex-grow: 1;
+  margin: 0;
+  padding: 19px 0px 20px 0px;
+
+  @media #{$desktop} {
+    display: none;
+  }
+}
+
+.company__link {
+  display: inline-block;
+  position: relative;
+  color: rgba(122, 152, 214, 0.8);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 26px;
+  text-decoration: none;
+  margin-right: 14px;
+  padding: 0;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    right: -9px;
+    border-right: 1px solid rgba(122, 152, 214, 0.8);
+    height: 12px;
+  }
+
+  &:last-child::after {
+    border-right: 0;
+  }
+
+  &:hover {
+    color: #fbf239;
+  }
+}

@@ -1,0 +1,48 @@
+.service {
+  padding: 19px 0px 27px 0px;
+
+  @media #{$desktop} {
+    order: 1;
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+.service__target {
+  display: inline-block;
+  vertical-align: top;
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  line-height: 16px;
+  margin: 0px 14px 0px 0px;
+  padding-bottom: 6px;
+
+  &:hover,
+  &--active {
+    color: #ffffff;
+  }
+
+  &--active {
+    border-bottom: 4px solid #fbf239;
+  }
+
+  @media #{$desktop} {
+    color: #d2d2d2;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    margin: 0px 3.5% 0px 0px;
+    padding: 7px 0px 5px 0px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &--active {
+      color: #002672;
+    }
+  }
+}
