@@ -1,0 +1,193 @@
+.slider {
+  position: relative;
+  min-height: 53px;
+
+  @media #{$desktop} {
+    min-height: 589px;
+  }
+}
+
+.slider__control {
+  display: none;
+}
+
+.slider__arrows {
+  position: relative;
+
+  .nojs & {
+    display: none;
+  }
+}
+
+.slider__btn {
+  position: absolute;
+  top: 18px;
+  font-size: 0;
+  border: 0;
+  width: 19px;
+  height: 19px;
+  background-color: transparent;
+  // background-color: red; //
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    border: 0;
+    border-top: 3px solid #ffffff;
+    border-left: 3px solid #ffffff;
+    width: 10px;
+    height: 10px;
+  }
+
+  &--prev {
+    left: 20px;
+  }
+
+  &--prev::before {
+    left: 4px;
+    transform: rotate(-45deg);
+  }
+
+  &--next {
+    right: 20px;
+  }
+
+  &--next::before {
+    right: 4px;
+    transform: rotate(135deg);
+  }
+
+  @media #{$desktop} {
+    top: 213px;
+    width: 26px;
+    height: 42px;
+
+    &::before {
+      top: 6px;
+      border-top: 5px solid #ffffff;
+      border-left: 5px solid #ffffff;
+      width: 24px;
+      height: 24px;
+    }
+
+    &--prev {
+      left: 45px;
+    }
+
+    &--next {
+      right: 45px;
+    }
+  }
+}
+
+.slider__dots {
+  display: none;
+  font-size: 0;
+  text-align: center;
+
+  @media #{$desktop} {
+    display: block;
+    position: absolute;
+    top: 348px;
+    right: 0px;
+    left: 0px;
+  }
+}
+
+.slider__dot {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0px 7px 0px 7px;
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+}
+
+#slide1:checked ~ .slider__dots .slider__dot:nth-child(1),
+#slide2:checked ~ .slider__dots .slider__dot:nth-child(2),
+#slide3:checked ~ .slider__dots .slider__dot:nth-child(3),
+#slide4:checked ~ .slider__dots .slider__dot:nth-child(4) {
+  border: 3px solid #fff200;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+}
+
+.slider__slides {
+
+}
+
+.slider__slide {
+  display: none;
+  text-align: center;
+  margin: 0;
+  padding: 11px 0px 0px 0px;
+  width: 100%;
+  min-height: 42px;
+  background-color: #cccccc;
+  background-image: url('http://placehold.it/320x53');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+
+  &--business {
+    background-image: url('../img/bg-slide1-mobile.jpg');
+  }
+
+  @media #{$desktop} {
+    min-height: 444px;
+    padding: 145px 0px 0px 0px;
+    background-image: url('http://placehold.it/1280x589');
+
+    &--business {
+      background-image: url('../img/bg-slide1-desktop.jpg');
+    }
+  }
+}
+
+#slide1:checked ~ .slider__slides .slider__slide:nth-child(1),
+#slide2:checked ~ .slider__slides .slider__slide:nth-child(2),
+#slide3:checked ~ .slider__slides .slider__slide:nth-child(3),
+#slide4:checked ~ .slider__slides .slider__slide:nth-child(4) {
+  display: block;
+}
+
+.slider__title {
+  display: inline-block;
+  color: #eff2f9;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  margin: 0;
+  padding: 0px 0px 3px 0px;
+
+  & a {
+    color: #eff2f9;
+    text-decoration: none;
+  }
+
+  @media #{$desktop} {
+    font-size: 83px;
+    line-height: 67px;
+    padding: 0px 0px 14px 0px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+}
+
+.slider__desc {
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 100;
+  line-height: 12px;
+  margin: 0;
+  padding: 0;
+
+  @media #{$desktop} {
+    font-size: 21px;
+    line-height: 22px;
+    padding: 12px 0px 0px 0px;
+  }
+}
