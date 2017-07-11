@@ -1,0 +1,41 @@
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  color: #263b82;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0;
+  padding: 20px 0px 20px 0px;
+  border: 3px solid #123885;
+  cursor: pointer;
+  transition: color 0.7s ease, background-color 0.7s ease;
+
+  &:hover {
+    color: #f0f2f9;
+    border-color: #263b82;
+    background-color: #263b82;
+  }
+
+  &--offer {
+    font-size: 13px;
+    line-height: 14px;
+    padding: 7px 15px 11px 15px;
+  }
+
+  @media #{$desktop} {
+    color: #123885;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    padding: 16px 0px 18px 0px;
+    border: 3px solid #123885;
+
+    &--offer {
+      padding-right: 32px;
+      padding-left: 32px;
+    }
+  }
+}
