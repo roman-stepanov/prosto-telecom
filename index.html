@@ -227,7 +227,7 @@
       </div>
     </main>
     <div class="overlay"></div>
-    <div class="modal">
+    <div class="modal  modal--login">
       <input id="login-tab1" class="modal__tab-control" type="radio" name="modal-login" value="login-tab1" checked>
       <input id="login-tab2" class="modal__tab-control" type="radio" name="modal-login" value="login-tab2">
       <div class="modal__header">
@@ -247,7 +247,7 @@
           <input class="form__input" type="password" name="password" placeholder="Пароль" required>
           <input class="form__input" type="password" name="confirm-password" placeholder="Подтвердите пароль" required>
           <div class="form__footer">
-            <button class="btn" type="submit" name="button">Зарегистрироваться</button>
+            <button class="btn  btn--login" type="submit" name="button">Зарегистрироваться</button>
           </div>
         </form>
         <form class="form" action="#" method="post">
@@ -255,7 +255,7 @@
         </form>
       </div>
     </div>
-    <div class="modal">
+    <div class="modal  modal--call-me">
       <input id="feedback-tab1" class="modal__tab-control" type="radio" name="modal-feedback" value="feedback-tab1">
       <input id="feedback-tab2" class="modal__tab-control" type="radio" name="modal-feedback" value="feedback-tab2" checked>
       <input id="feedback-tab3" class="modal__tab-control" type="radio" name="modal-feedback" value="feedback-tab3">
@@ -275,39 +275,50 @@
         <form class="form" action="#" method="post">
           <input class="form__input  form__input--full-name" type="text" name="name" placeholder="Фамилия, Имя, Отчество" required>
           <input class="form__input  form__input--phone" type="tel" name="phone" placeholder="Номер телефона" required>
-          <input class="form__input  form__input--email" type="email" name="email" placeholder="Email" required>
-          <div class="form__group">
-            <label for="city" class="form__label">Адрес подключения услуги</label>
-            <select id="city" name="city" required>
-              <option value="">Выберите город</option>
-              <option value="city1">Санкт-Петербург</option>
-            </select>
+          <input class="form__input  form__input--email" type="email" name="email" placeholder="Электронная почта" required>
+          <div class="form__group  form__group--address">
+            <span class="form__label">Адрес подключения услуги</span>
+            <div class="select  select--city">
+              <span class="select__value  select__value--yellow">Выберите город</span>
+              <ul class="select__dropdown">
+                <li class="select__option" data-value="city1">Санкт-Петербург</li>
+                <li class="select__option" data-value="city2">Город 2</li>
+                <li class="select__option" data-value="city3">Город 3</li>
+              </ul>
+              <input type="hidden" name="city">
+            </div>
             <input class="form__input  form__input--street" type="text" name="street" placeholder="Улица" required>
             <input class="form__input  form__input--house" type="text" name="house" placeholder="Номер дома" required>
             <input class="form__input  form__input--apartment" type="text" name="apartment" placeholder="Квартира" required>
           </div>
-          <div class="form__group">
-            <label for="type" class="form__label">Тип обращения</label>
-            <select id="type" name="type" required>
-              <option value="">Выберите тип услуги</option>
-              <option value="type1">Интернет</option>
-              <option value="type2">Телефония</option>
-              <option value="type3">Каналы передачи данных</option>
-            </select>
+          <div class="form__group  form__group--type">
+            <span class="form__label">Тип обращения</span>
+            <div class="select  select--type">
+              <span class="select__value">Выберите тип услуги</span>
+              <ul class="select__dropdown">
+                <li class="select__option" data-value="type1">Интернет</li>
+                <li class="select__option" data-value="type2">Телефония</li>
+                <li class="select__option" data-value="type3">Каналы передачи данных</li>
+              </ul>
+              <input type="hidden" name="type">
+            </div>
           </div>
-          <div class="form__group">
-            <label for="subject" class="form__label">Тема обращения</label>
-            <select id="subject" name="subject" required>
-              <option value="">Выберите тему</option>
-              <option value="subject1">Тема 1</option>
-              <option value="subject2">Тема 2</option>
-              <option value="subject3">Тема 3</option>
-            </select>
+          <div class="form__group  form__group--subject">
+            <span class="form__label">Тема обращения</span>
+            <div class="select  select--subject">
+              <span class="select__value">Выберите тему</span>
+              <ul class="select__dropdown">
+                <li class="select__option" data-value="subject1">Тема 1</li>
+                <li class="select__option" data-value="subject2">Тема 2</li>
+                <li class="select__option" data-value="subject3">Тема 3</li>
+              </ul>
+              <input type="hidden" name="subject">
+            </div>
           </div>
-          <textarea class="form__input  form__input--message" name="message" placeholder="Сообщение" required></textarea>
+          <textarea class="form__input  form__input--message" name="message" placeholder="Текст обращения" required></textarea>
           <div class="form__footer">
             <span class="form__required">Все поля обязательны для заполнения</span>
-            <button class="btn" type="submit" name="button">Отправить</button>
+            <button class="btn  btn--call-me" type="submit" name="button">Отправить</button>
           </div>
         </form>
         <form class="form" action="#" method="post">

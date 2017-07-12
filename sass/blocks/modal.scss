@@ -1,0 +1,244 @@
+.modal {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 20;
+  margin: 0;
+  padding: 25px 24px 28px 24px;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #ffffff;
+
+  &--show {
+    display: block;
+  }
+
+  @media #{$desktop} {
+    padding: 29px 24px 26px 24px;
+
+    &--login {
+      top: 130px;
+      left: 50%;
+      margin-left: -350px;
+      width: 704px;
+    }
+
+    &--call-me {
+      top: 90px;
+      left: 50%;
+      width: 100%;
+      max-width: 952px;
+      transform: translate(-50%, 0%);
+    }
+  }
+}
+
+.modal__tab-control {
+  display: none;
+}
+
+.modal__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  padding: 0px 0px 28px 0px;
+
+  @media #{$desktop} {
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 0px 27px 0px;
+  }
+}
+
+.modal__btn-close {
+  position: absolute;
+  top: 4px;
+  left: 0px;
+  z-index: 20;
+  font-size: 0;
+  border: 0px;
+  width: 26px;
+  height: 21px;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    border: 1px solid #688cd6;
+    border-top-width: 0;
+    border-right-width: 0;
+    width: 14px;
+    height: 14px;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 1px;
+    border-bottom: 1px solid #688cd6;
+    width: 26px;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    border-color: #fff200;
+  }
+
+  @media #{$desktop} {
+    top: -13px;
+    right: -5px;
+    left: auto;
+    width: 21px;
+    height: 21px;
+
+    &::before,
+    &::after {
+      top: 10px;
+      left: -4px;
+      border: 0;
+      border-bottom: 1px solid #000000;
+      width: 29px;
+      height: 0px;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.modal__title {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  color: #123885;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  margin: 0;
+  padding: 5px 35px 34px 42px;
+
+  &--help::after {
+    content: '?';
+    position: absolute;
+    top: 3px;
+    right: 0px;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19px;
+    text-align: center;
+    border: 2px solid #fff200;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    cursor: help;
+  }
+
+  @media #{$desktop} {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 26px;
+    padding: 0px 27px 0px 0px;
+
+    &--help {
+      padding: 0px 58px 0px 0px;
+    }
+
+    &--help::after {
+      right: 23px;
+    }
+  }
+}
+
+.modal__tabs {
+  display: flex;
+  font-size: 0;
+  width: 100%;
+
+  @media #{$desktop} {
+    width: auto;
+  }
+}
+
+.modal__tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #263b82;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  margin: 0;
+  padding: 0px 5px 0px 5px;
+  border: 1px solid #97adef;
+  width: 100%;
+  min-height: 32px;
+  cursor: pointer;
+
+  &:not(:nth-child(1)) {
+    margin-left: -1px;
+  }
+
+  &:first-child {
+    padding-left: 12px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  &:last-child {
+    padding-right: 12px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  @media #{$desktop} {
+    font-size: 14px;
+    line-height: 14px;
+    padding: 0px 16px 0px 16px;
+    width: auto;
+
+    &:first-child {
+      padding-left: 19px;
+    }
+
+    &:last-child {
+      padding-right: 19px;
+    }
+  }
+}
+
+.modal__tab-content {
+  margin: 0;
+  padding: 30px 17px 51px 17px;
+  background-color: #f0f2f9;
+
+  @media #{$desktop} {
+    padding: 36px 35px 31px 35px;
+  }
+}
+
+#login-tab1:checked ~ .modal__tab-content form:nth-child(1),
+#login-tab2:checked ~ .modal__tab-content form:nth-child(2),
+#feedback-tab1:checked ~ .modal__tab-content form:nth-child(1),
+#feedback-tab2:checked ~ .modal__tab-content form:nth-child(2),
+#feedback-tab3:checked ~ .modal__tab-content form:nth-child(3) {
+  display: flex;
+}
+
+#login-tab1:checked ~ .modal__header .modal__tab:nth-child(1),
+#login-tab2:checked ~ .modal__header .modal__tab:nth-child(2),
+#feedback-tab1:checked ~ .modal__header .modal__tab:nth-child(1),
+#feedback-tab2:checked ~ .modal__header .modal__tab:nth-child(2),
+#feedback-tab3:checked ~ .modal__header .modal__tab:nth-child(3) {
+  color: #ffffff;
+  border-color: #123885;
+  background-color: #123885;
+}

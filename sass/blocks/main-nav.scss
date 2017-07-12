@@ -125,8 +125,12 @@
     display: none;
   }
 
+  .main-nav--opened  .main-nav__toggle {
+    position: fixed;
+  }
+
   .main-nav--opened  .main-nav__wrapper {
-    position: absolute;
+    position: fixed;
     top: 0px;
     right: 0px;
     left: 24px;

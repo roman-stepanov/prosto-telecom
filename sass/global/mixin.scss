@@ -1,0 +1,23 @@
+@mixin placeholder {
+
+  &::-webkit-input-placeholder {
+    color: #b3b3b3;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 14px;
+  }
+
+  &::-moz-placeholder {
+    color: #b3b3b3;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 14px;
+  }
+
+  &:-ms-input-placeholder {
+    color: #b3b3b3;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 14px;
+  }
+}
