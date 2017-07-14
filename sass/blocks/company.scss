@@ -32,7 +32,8 @@
     border-right: 0;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: #fbf239;
   }
 }

@@ -28,7 +28,8 @@
     background-repeat: no-repeat;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: #fbf239;
     background-color: #fbf239;
   }
@@ -41,7 +42,8 @@
     background-position: -6px -7px;
   }
 
-  &--login:hover::before {
+  &--login:hover::before,
+  &--login:focus::before {
     background-position: -41px -7px;
   }
 
@@ -49,7 +51,8 @@
     background-position: -75px -7px;
   }
 
-  &--call-me:hover::before {
+  &--call-me:hover::before,
+  &--call-me:focus::before {
     background-position: -110px -7px;
   }
 
@@ -57,7 +60,8 @@
     background-position: -146px -5px;
   }
 
-  &--search:hover::before {
+  &--search:hover::before,
+  &--search:focus::before {
     background-position: -181px -5px;
   }
 
