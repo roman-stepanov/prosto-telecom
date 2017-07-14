@@ -71,19 +71,11 @@
     </header>
     <main>
       <div class="slider">
-        <input id="slide1" class="slider__control" type="radio" name="slider" value="slide1">
-        <input id="slide2" class="slider__control" type="radio" name="slider" value="slide2">
-        <input id="slide3" class="slider__control" type="radio" name="slider" value="slide3" checked>
-        <input id="slide4" class="slider__control" type="radio" name="slider" value="slide4">
         <div class="slider__arrows">
           <button class="slider__btn  slider__btn--prev" type="button">Назад</button>
           <button class="slider__btn  slider__btn--next" type="button">Вперед</button>
         </div>
         <div class="slider__dots">
-          <label for="slide1" class="slider__dot"></label>
-          <label for="slide2" class="slider__dot"></label>
-          <label for="slide3" class="slider__dot"></label>
-          <label for="slide4" class="slider__dot"></label>
         </div>
         <div class="slider__slides">
           <div class="slider__slide">
@@ -94,7 +86,7 @@
             <h3 class="slider__title"><a href="#">Слайд 2</a></h3>
             <p class="slider__desc">слайд2 слайд2 слайд2 слайд2</p>
           </div>
-          <div class="slider__slide  slider__slide--business">
+          <div class="slider__slide  slider__slide--business  slider__slide--active">
             <h3 class="slider__title"><a href="#">Малый бизнес</a></h3>
             <p class="slider__desc">от идеи до воплощения 3 дня</p>
           </div>
@@ -189,11 +181,8 @@
             <span class="news__tab  news__tab--active">Новости</span>
             <span class="news__tab">Публикации</span>
           </div>
-          <input id="news1" class="news__switch" type="radio" name="news" value="news1">
-          <input id="news2" class="news__switch" type="radio" name="news" value="news2" checked>
-          <input id="news3" class="news__switch" type="radio" name="news" value="news3">
           <div class="news__tab-content">
-            <article class="news__item">
+            <article class="news__item news__item--active">
               <h3 class="news__title"><a href="#">«ПРОСТО Телеком» приступает к оказанию услуг телефонии в Пензе</a></h3>
               <p class="news__text">
                 Корпоративные клиенты в Пензе теперь могут приобрести городские телефонные номера у оператора связи "ПРОСТО Телеком"
@@ -216,9 +205,6 @@
             </article>
           </div>
           <div class="news__dots">
-            <label for="news1" class="news__dot"></label>
-            <label for="news2" class="news__dot"></label>
-            <label for="news3" class="news__dot"></label>
           </div>
           <div class="news__btn-wrapper">
             <a class="btn  btn--news" href="#">Еще новости</a>
