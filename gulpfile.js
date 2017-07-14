@@ -28,6 +28,11 @@ gulp.task('copy:fonts', function() {
     .pipe(gulp.dest('build/fonts'));
 });
 
+gulp.task('copy:news', function() {
+  return gulp.src('data/news.json')
+    .pipe(gulp.dest('build/data'));
+});
+
 gulp.task('normalize', function() {
   return gulp.src('node_modules/normalize.css/normalize.css')
     .pipe(gulp.dest('build/css'))
@@ -78,6 +83,7 @@ gulp.task('build', function(cb) {
     'copy:fonts',
     'images',
     'scripts',
+    'copy:news',
     cb
   );
 });

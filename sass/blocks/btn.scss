@@ -14,7 +14,8 @@
   cursor: pointer;
   transition: color 0.7s ease, background-color 0.7s ease;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: #f0f2f9;
     border-color: #263b82;
     background-color: #263b82;
@@ -33,6 +34,10 @@
   &--call-me {
     padding-right: 52px;
     padding-left: 52px;
+  }
+
+  &--hidden {
+    display: none;
   }
 
   @media #{$desktop} {
