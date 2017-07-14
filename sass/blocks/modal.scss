@@ -199,6 +199,11 @@
     border-bottom-right-radius: 20px;
   }
 
+  &:hover {
+    color: #ffffff;
+    background-color: #97adef;
+  }
+
   @media #{$desktop} {
     font-size: 14px;
     line-height: 14px;
