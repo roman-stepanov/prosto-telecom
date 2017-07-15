@@ -6,6 +6,7 @@
   var tabs = tabsContainer.querySelectorAll('.news__tab');
   var activeTab = tabsContainer.querySelector('.news__tab--active');
   var newsItemsContainer = newsSection.querySelector('.news__tab-content');
+  var loader = newsSection.querySelector('.news__loader');
   var newsItems = null;
   var activeNews = 0;
   var dotsContainer = newsSection.querySelector('.news__dots');
@@ -23,6 +24,16 @@
   var NEWS_DATA = 'http://localhost:3000/data/news.json';
   var ITEM_NEWS = 'news';
   var ITEM_PUBLICATION = 'publication';
+
+  var showLoader = function() {
+    loader.classList.add('news__loader--show');
+    xhrInProgress = true;
+  };
+
+  var hideLoader = function () {
+    loader.classList.remove('news__loader--show')
+    xhrInProgress = false;
+  };
 
   var updateNewsItems = function() {
     newsItems = newsItemsContainer.querySelectorAll('.news__item');
@@ -102,7 +113,7 @@
 
   var sendRequest = function() {
     if (!xhrInProgress) {
-      xhrInProgress = true;
+      showLoader();
       xhr.open('GET', NEWS_DATA);
       xhr.send();
     }
@@ -181,7 +192,7 @@
 
   var onErrorLoadData = function(evt) {
     console.log('не удалось загрузить news.json');
-    xhrInProgress = false;
+    hideLoader();
   };
 
   var onLoadData = function(evt) {
@@ -189,7 +200,7 @@
       onErrorLoadData(evt);
     } else if (evt.target.status >= 200) {
       renderItems(JSON.parse(evt.target.response));
-      xhrInProgress = false;
+      hideLoader();
     }
   };
 
