@@ -58,9 +58,9 @@
             <a class="company__link" href="#">Контакты</a>
           </div>
           <div class="user">
-            <a class="user__btn  user__btn--login" href="#">Личные кабинет</a>
-            <a class="user__btn  user__btn--call-me" href="#">Обратная связь</a>
-            <a class="user__btn  user__btn--search" href="#">Поиск</a>
+            <a class="user__btn  user__btn--login" href="#" data-hint="Личный кабинет">Личные кабинет</a>
+            <a class="user__btn  user__btn--call-me" href="#" data-hint="Обратная связь">Обратная связь</a>
+            <a class="user__btn  user__btn--search" href="#" data-hint="Поиск">Поиск</a>
           </div>
           <div class="location">
             <a class="location__city" href="#">Санкт-Петербург</a>
@@ -247,7 +247,8 @@
       <input id="feedback-tab3" class="modal__tab-control" type="radio" name="modal-feedback" value="feedback-tab3">
       <div class="modal__header">
         <button class="modal__btn-close" type="button" title="Закрыть">Закрыть</button>
-        <h2 class="modal__title  modal__title--help">Обратная связь</h2>
+        <h2 class="modal__title">Обратная связь</h2>
+        <span class="modal__help" data-hint="После обработки сообщения, с Вами свяжется наш менеджер">?</span>
         <div class="modal__tabs">
           <label for="feedback-tab1" class="modal__tab">Частный клиент</label>
           <label for="feedback-tab2" class="modal__tab">Юридическое лицо</label>

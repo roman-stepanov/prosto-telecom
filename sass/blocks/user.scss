@@ -10,6 +10,7 @@
   display: inline-block;
   vertical-align: top;
   position: relative;
+  text-decoration: none;
   margin: 0px 8px 0px 0px;
   padding: 0;
   border: 2px solid rgba(255, 255, 255, 0.2);
@@ -32,6 +33,32 @@
   &:focus {
     border-color: #fbf239;
     background-color: #fbf239;
+  }
+
+  &::after {
+    content: attr(data-hint);
+    display: block;
+    position: absolute;
+    bottom: -40px;
+    left: -3px;
+    z-index: 1;
+    color: #fcfdff;
+    font-size: 12px;
+    line-height: 12px;
+    white-space: nowrap;
+    margin: 0;
+    padding: 9px 10px 9px 10px;
+    background-color: #000000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s, visibility 0s 0.6s
+  }
+
+  &:hover::after,
+  &:focus::after {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s, visibility 0s;
   }
 
   &:last-child {
@@ -67,6 +94,11 @@
 
   @media #{$desktop} {
     border-color: #eaeaea;
+
+    &::after {
+      right: -3px;
+      left: auto;
+    }
 
     &--login::before {
       background-position: -41px -7px;

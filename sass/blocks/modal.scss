@@ -5,7 +5,7 @@
   left: 0px;
   z-index: 20;
   margin: 0;
-  padding: 25px 24px 28px 24px;
+  padding: 27px 24px 28px 24px;
   box-sizing: border-box;
   width: 100%;
   background-color: #ffffff;
@@ -40,21 +40,20 @@
 
 .modal__header {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
   position: relative;
   padding: 0px 0px 28px 0px;
 
   @media #{$desktop} {
-    flex-direction: row;
-    align-items: center;
     padding: 0px 0px 27px 0px;
   }
 }
 
 .modal__btn-close {
   position: absolute;
-  top: 4px;
+  top: 2px;
   left: 0px;
   z-index: 20;
   font-size: 0;
@@ -115,7 +114,6 @@
 }
 
 .modal__title {
-  display: inline-block;
   vertical-align: top;
   position: relative;
   color: #123885;
@@ -123,37 +121,82 @@
   font-weight: 500;
   line-height: 16px;
   margin: 0;
-  padding: 5px 35px 34px 42px;
-
-  &--help::after {
-    content: '?';
-    position: absolute;
-    top: 3px;
-    right: 0px;
-    color: #000000;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 19px;
-    text-align: center;
-    border: 2px solid #fff200;
-    border-radius: 50%;
-    width: 18px;
-    height: 18px;
-    cursor: help;
-  }
+  padding: 3px 13px 3px 42px;
 
   @media #{$desktop} {
     font-size: 26px;
     font-weight: 700;
     line-height: 26px;
-    padding: 0px 27px 0px 0px;
+    padding: 0px 12px 0px 0px;
+  }
+}
 
-    &--help {
-      padding: 0px 58px 0px 0px;
-    }
+.modal__help {
+  display: inline-block;
+  position: relative;
+  color: #1c1c1c;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: 2px solid #fff200;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
 
-    &--help::after {
-      right: 23px;
+  &::before {
+    content: attr(data-hint);
+    display: block;
+    position: absolute;
+    bottom: -55px;
+    right: -33px;
+    z-index: 1;
+    color: #fcfdff;
+    font-size: 12px;
+    line-height: 12px;
+    margin: 0;
+    padding: 9px 0px 9px 0px;
+    width: 228px;
+    background-color: #000000;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: -13px;
+    border: 9px solid #000000;
+    border-top-width: 0;
+    border-right-color: transparent;
+    border-bottom-width: 6px;
+    border-left-color: transparent;
+  }
+
+  &::before,
+  &::after {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s, visibility 0s 0.6s
+  }
+
+  &:hover {
+    cursor: help;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s, visibility 0s;
+  }
+
+  @media #{$desktop} {
+    margin: 0px 23px 0px 0px;
+
+    &:before{
+      right: -10px;
     }
   }
 }
@@ -161,9 +204,12 @@
 .modal__tabs {
   display: flex;
   font-size: 0;
+  margin: 0;
+  padding: 31px 0px 0px 0px;
   width: 100%;
 
   @media #{$desktop} {
+    padding: 0;
     width: auto;
   }
 }
@@ -182,6 +228,7 @@
   width: 100%;
   min-height: 32px;
   cursor: pointer;
+  transition: background-color 0.6s ease;
 
   &:not(:nth-child(1)) {
     margin-left: -1px;
